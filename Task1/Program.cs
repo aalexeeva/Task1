@@ -1,5 +1,4 @@
 ﻿using System;
-using static System.Console;
 
 namespace Task1
 {
@@ -7,8 +6,8 @@ namespace Task1
     {
         public static void Main(string[] args)
         {
-            Write("Input n: ");
-            int n = Convert.ToInt32(ReadLine());
+            Console.Write("Input n: ");
+            int n = Convert.ToInt32(Console.ReadLine());
             long a = 1, b = 1, r = 0;
             for (int i = 0; i < n - 1; i++)
             {
@@ -17,10 +16,8 @@ namespace Task1
                 a = r;
             }
             long result = (long) Math.Pow(r, 2);
-            WriteLine(r);
-            WriteLine("result = {0}", result);
-            Write("Press any key to continue . . . ");
-            ReadKey(true);
+            Console.WriteLine("Result = {0}", result);
+            Console.ReadKey(true);
         }
     }
 }
